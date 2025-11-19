@@ -13,54 +13,54 @@ Writes data into bronze Delta tables (bronze_laps and bronze_telemetry).
 
 Automatically stores:
 
-lap times
+  - lap times
 
-stint data
+  - stint data
 
-tire compounds
+  - tire compounds
 
-best-lap telemetry for each stint
+  - best-lap telemetry for each stint
 
-event metadata
+  - event metadata
 
  2. Transformation Pipeline (Databricks Notebook)
 
-Creates full silver and gold datasets:
+  - Creates full silver and gold datasets:
 
-Lap, sector, and stint-level aggregates
+  - Lap, sector, and stint-level aggregates
 
-Reliability scoring based on:
+  - Reliability scoring based on:
 
-large gap rate
+  - large gap rate
 
-data completeness
+  - data completeness
 
-drift stability
+  - drift stability
 
-Human-readable SQL views for:
+  - Human-readable SQL views for:
 
-stint performance
+  - stint performance
 
-stint-level telemetry reliability
+  - stint-level telemetry reliability
 
-sector averages
+  - sector averages
 
-best-in-compound deltas
+  - best-in-compound deltas
 
 This process makes the data clean, structured, and ready for analytics.
 
  3. Interactive Streamlit App
 
-Connects to Databricks via SQL Warehouse using the databricks-sql-connector.
+  Connects to Databricks via SQL Warehouse using the databricks-sql-connector.
 
-Lets you explore:
+  Lets you explore:
 
-driver stints
+  - driver stints
 
-lap time deltas
+  - lap time deltas
 
-reliability scores
+  - reliability scores
 
-stint summaries
+  - stint summaries
 
-Automatically loads sessions that have been previously ingested (no need to rerun ingestion).
+  - Automatically loads sessions that have been previously ingested (no need to rerun ingestion).
